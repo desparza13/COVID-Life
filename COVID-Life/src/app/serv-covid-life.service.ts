@@ -15,4 +15,8 @@ export class ServCOVIDLifeService {
    getSummary(){
      return this.http.get('https://api.covid19api.com/summary');
    }
+
+   getCountries(){
+     return this.http.get('https://api.covid19api.com/summary');
+   }
 }

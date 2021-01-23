@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { ServCOVIDLifeService } from '../serv-covid-life.service';
 
 @Component({
@@ -8,20 +10,30 @@ import { ServCOVIDLifeService } from '../serv-covid-life.service';
 })
 export class Tab2Page {
   Summary = [];
-  NewConfirmed: any;
-  constructor(public service:ServCOVIDLifeService) {
+  Countries = [];
+  constructor(public service:ServCOVIDLifeService,
+              public navCtrl:NavController) {
 
   }
-  
+
   IonViewWillEnter(){
     
   }
 
   ngOnInit(){
     this.service.getSummary().subscribe(data => {
-      this.Summary=data['Global'];
+      this.Summary = data['Global'];
       console.log(data['Global']);
     });
+
+      this.service.getCountries().subscribe(countryList => {
+        this.Countries.push(countryList);
+        console.log("Countries:", countryList);
+      })
+  }
+
+  goToSelectCountries(){
+    this.navCtrl.navigateForward('country-list');
   }
 
 }

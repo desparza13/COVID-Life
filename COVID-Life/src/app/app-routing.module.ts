@@ -7,8 +7,20 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'tweets-page',
-    loadChildren: () => import('./tweets-page/tweets-page.module').then( m => m.TweetsPagePageModule)
+    path: 'you-tube-videos',
+    loadChildren: () => import('./you-tube-videos/you-tube-videos.module').then( m => m.YouTubeVideosPageModule)
+  },
+  {
+    path: 'country-list',
+    loadChildren: () => import('./country-list/country-list.module').then( m => m.CountryListPageModule)
+  },
+  {
+    path: 'quarantine-ideas',
+    loadChildren: () => import('./quarantine-ideas/quarantine-ideas.module').then( m => m.QuarantineIdeasPageModule)
+  },
+  {
+    path: 'case-test',
+    loadChildren: () => import('./case-test/case-test.module').then( m => m.CaseTestPageModule)
   }
 ];
 @NgModule({

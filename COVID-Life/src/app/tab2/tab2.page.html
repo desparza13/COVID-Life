@@ -53,13 +53,14 @@
             <ion-col>
               <p class="CardText">
                 <ion-icon name="heart-half-outline"></ion-icon>
-                New recoveries:
+                New recoveries: {{Summary.NewRecovered}}
+                
               </p> 
             </ion-col>
             <ion-col>
               <p class="CardText">
                 <ion-icon name="heart-circle-outline"></ion-icon>
-                Total recoveries:
+                Total recoveries: {{Summary.TotalRecovered}}
               </p> 
             </ion-col>
           </ion-row>
@@ -67,5 +68,9 @@
       </ion-card-content>
     </ion-card-header>
   </ion-card>
-
+  <ion-fab class="fab-button-style" vertical="bottom" horizontal="end" color="danger" edge slot="fixed">
+    <ion-fab-button (click)="goToSelectCountries()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

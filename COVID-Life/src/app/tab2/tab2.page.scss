@@ -19,3 +19,19 @@
 .CardBackground{
     --background: #F0F3BD;
 }
+
+.fab-button-style{
+    animation-name: buttonAnim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    --background-color:red;
+}
+
+@keyframes buttonAnim{
+    0%{ opacity: 100%; }
+    25%{ opacity: 75%; }
+    50%{ opacity: 50% }
+    75%{ opacity: 75% }
+    100%{ opacity: 100% }
+}
+
