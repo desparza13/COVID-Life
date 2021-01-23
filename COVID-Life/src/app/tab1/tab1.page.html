@@ -1,11 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Stop the disease
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!--Prevention measures for COVID-19-->
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -13,5 +14,115 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card >
+    <img src="https://www.economist.com/img/b/2548/1434/90/1843magazine.com/sites/default/files/styles/il_manual_crop_16_9/public/facemask-header_0web.png" />
+    <ion-card-header color="lightgreen">
+      <ion-card-subtitle>Mask use</ion-card-subtitle>
+      <ion-card-title>Wear a mask over your nose and mouth</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Masks help prevent you from getting or spreading the virus.</li>
+        <ul>
+        <li>You could spread COVID-19 to others <b>even</b> if you do not feel sick.</li>
+        </ul>
+        <li>Everyone should wear a mask in public settings and when around people who don’t live in your household.</li>
+        <ul>
+        <li>Masks should not be placed on young children under age 2, anyone who has trouble breathing, or is unconscious, incapacitated
+           or otherwise unable to remove the mask without assistance.</li>
+        </ul>
+        <li>Do <b>NOT</b> use a mask meant for a healthcare worker.</li>
+        <ul>
+        <li>Currently, surgical masks and N95 respirators are critical supplies that should be reserved for healthcare workers and other first responders.</li>
+        </ul>
+        <li><b>REMEMBER </b>The mask is not a substitute for social distancing.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://www.economist.com/img/b/2548/1434/90/1843magazine.com/sites/default/files/styles/il_manual_crop_16_9/public/facemask-header_0web.png" />
+    <ion-card-header color="lightgreen">
+      <ion-card-subtitle>Social distancing</ion-card-subtitle>
+      <ion-card-title>Stay 6 feet away from others</ion-card-title>
+      <ion-card-subtitle><i>Even</i>if you really like them...might be difficult tho</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li><b>Inside your home: </b>Avoid close contact with people who are sick.</li>
+        <ul>
+          <li> If possible, maintain 6 feet between the person who is sick and other household members.</li>
+        </ul>
+        <li><b>Outside your home: </b>Put 6 feet of distance between yourself and people who don’t live in your household.</li>
+        <ul>
+          <li>Remember that some people <b>without </b>symptoms may be able to spread the virus</li>
+          <li>Stay at least 6 feet away from other people</li>
+        </ul>      
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://www.economist.com/img/b/2548/1434/90/1843magazine.com/sites/default/files/styles/il_manual_crop_16_9/public/facemask-header_0web.png" />
+    <ion-card-header color="lightgreen">
+      <ion-card-subtitle>Lonely times</ion-card-subtitle>
+      <ion-card-title>Avoid crowds</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>Being in crowds like in restaurants, bars, fitness centers, or movie theaters put you at higher risk for COVID-19.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://www.economist.com/img/b/2548/1434/90/1843magazine.com/sites/default/files/styles/il_manual_crop_16_9/public/facemask-header_0web.png" />
+    <ion-card-header color="lightgreen">
+      <ion-card-subtitle>Hand sanitazion</ion-card-subtitle>
+      <ion-card-title>Wash your hands often</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>
+          Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place,
+           or after blowing your nose, coughing, or sneezing.
+        </li>
+        <li>It's especially important to wash:</li>
+        <ul>
+        <li>Before eating or preparing food</li>
+        <li>Before touching your face</li>
+        <li>After leaving a public place</li>
+        <li>After coughing or sneezing</li>
+        <li>After handling your mask</li>
+        <li>After caring for someone sick</li>
+        </ul>
+        <li>
+          If you can't wash your hands, <b>use a hand sanitizer that contains at least 60% alcohol</b> 
+          Cover all surfaces of your hands and rub them together
+        </li>
+        <li><b>Avoid touching your eyes, nose, and mouth </b>with unwashed hands</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://www.economist.com/img/b/2548/1434/90/1843magazine.com/sites/default/files/styles/il_manual_crop_16_9/public/facemask-header_0web.png" />
+    <ion-card-header color="lightgreen">
+      <ion-card-subtitle>Sanitization</ion-card-subtitle>
+      <ion-card-title>Clean and disinfect</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>
+          <b>Clean AND disinfect frequently touched surfaces daily</b> This includes <i>but is not limited to</i>
+          tables, doorknobs, light switches, countertops, handles, phones, desks, keyboards...etc.
+        </li>
+        <li><b>If surfaces are dirty, clean them</b> You can use soap and water to do so</li>
+        <li>Use products from <a href="https://www.epa.gov/pesticide-registration/list-n-disinfectants-coronavirus-covid-19">EPA's approved disinfectants list for COVID-19</a></li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!--Going to a page where you can find embedded tweets about COVID-19-->
+  <ion-button expand="block" [routerLink]="['/tweets-page']" >See what the authorities are talking about</ion-button>
 </ion-content>

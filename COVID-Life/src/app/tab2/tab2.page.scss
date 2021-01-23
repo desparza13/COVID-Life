@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+.CardImage{
+    border-radius: 50%;
+    transform: scale(0.8);
+}
+
+.CardText{
+    font-family: Architects Daughter;
+    font-size: 15px;
+}
+
+.CardTitle{
+    font-family: Raleway;
+    font-size: 25px;
+}
+
+.CardBackground{
+    --background: #F0F3BD;
+}

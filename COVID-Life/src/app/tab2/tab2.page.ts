@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServCOVIDLifeService } from '../serv-covid-life.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  Summary = [];
+  NewConfirmed: any;
+  constructor(public service:ServCOVIDLifeService) {
 
-  constructor() {}
+  }
+  
+  IonViewWillEnter(){
+    
+  }
+
+  ngOnInit(){
+    this.service.getSummary().subscribe(data => {
+      this.Summary=data['Global'];
+      console.log(data['Global']);
+    });
+  }
 
 }

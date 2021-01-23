@@ -1,17 +1,71 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Current situation
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+    <ion-toolbar >
+      <ion-title class="title" size="large">COVID in numbers</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card>
+    <ion-card-title class="CardTitle">
+      Global statistics
+    </ion-card-title>
+    <img class="CardImage" src="https://www.anahuac.mx/sites/default/files/gbb-uploads/CoronavirusCell_Mesadetrabajo1-wcs5o5.png">
+    <ion-card-header  class="CardBackground">
+      <ion-card-content>
+        <ion-grid class="BackgroundAnimation">
+          <ion-row>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="person-add-outline"></ion-icon>
+                New cases: {{Summary.NewConfirmed}}
+              </p> 
+            </ion-col>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="medical-outline"></ion-icon>
+                Total cases: {{Summary.TotalConfirmed}}
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="sad-outline"></ion-icon>
+                New deaths: {{Summary.NewDeaths}}
+              </p> 
+            </ion-col>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="invert-mode-outline"></ion-icon>
+                Total deaths: {{Summary.TotalDeaths}}
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="heart-half-outline"></ion-icon>
+                New recoveries:
+              </p> 
+            </ion-col>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="heart-circle-outline"></ion-icon>
+                Total recoveries:
+              </p> 
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+
 </ion-content>
