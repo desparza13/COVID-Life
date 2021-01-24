@@ -5,5 +5,154 @@
 </ion-header>
 
 <ion-content>
+  <ion-label> Completion : </ion-label>
+  <ion-progress-bar value={{completion}} color  ="lightgreen"></ion-progress-bar>
+
+  <div style= "display: {{p1}}">
+    <ion-card>
+      <img src= "https://media.giphy.com/media/xThuW0uZfF3rwVan4I/giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle>Please Answer with the buttons</ion-card-subtitle>
+        <ion-card-title>
+          First Question
+        </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h1> During the last 14 days  </h1>
+        <h2> Have you Travelled to a COVID active city ? or Have you maintained constant physical contact between a person with COVID? or Are you a medic that had personal contact with a COVID patient?</h2> 
+        <ion-button (click)="primeraYes()" color= "lightgreen" size="default" expand="block" > Yes </ion-button>
+        <ion-button (click)="primeraNo()"color= "danger" size="default" expand="block"> No </ion-button>
+      </ion-card-content> 
+    </ion-card>  
+  </div> 
+
+  <div style= "display: {{p2}}">
+    <ion-card>
+      <img src= "https://media4.giphy.com/media/XHw7f65yY134k75ZxQ/giphy.gif?cid=ecf05e47xrj435yu0xc9vp3ui06uzpg1k6u4k84g5r66y0bv&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle>Please Answer with the buttons</ion-card-subtitle>
+          <ion-card-title>
+            Second Question 
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h1> Do you have temperature higher than 38C ? or Cough? or troath pain? or fatigue? or Difficults on your respiration? </h1> 
+        <h2> If at least two or more of this are "Yes", please choose Yes. Other case choose "No". </h2>
+        <ion-button (click)="segundaYes()"color= "lightgreen" size="default" expand="block" > Yes </ion-button>
+        <ion-button (click)="segundaNo()"color= "danger" size="default" expand="block"> No </ion-button>
+      </ion-card-content> 
+    </ion-card>    
+  </div> 
+
+  <div style= "display: {{p3}}">
+    <ion-card>
+      <img src= "https://media1.giphy.com/media/IbUDQuYB628uJFbj8X/giphy.gif?cid=ecf05e47i8juxpbkll799atnzstsfexukx7ybgh5op5iebgz&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle>Please Answer with the buttons</ion-card-subtitle>
+          <ion-card-title>
+            Third Question 
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h1> Do you have neumonie/sepsis ? Do you feel like you suffocate? Do you Have vomit? Do you have Diarrhea? Do you have confusion? Lethargy?  </h1> 
+        <h2> If at least one is "Yes", please check yes. Other case choose No. </h2>
+        <ion-button (click)="terceraYes()" color= "lightgreen" size="default" expand="block" > Yes </ion-button>
+        <ion-button (click)="terceraNo()"color= "danger" size="default" expand="block"> No </ion-button>
+      </ion-card-content> 
+    </ion-card>    
+  </div> 
+  <div style= "display: {{p4}}">
+    <ion-card>
+      <img src= "https://media2.giphy.com/media/7UzKL9kj5vnlm/giphy.gif?cid=ecf05e47uwhjnouo9627sq5nkl6odyobrsa60l75j8cotrm8&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle>Please Answer with the buttons</ion-card-subtitle>
+          <ion-card-title>
+            Fourth Question 
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h1> Do you have more than 60 years or less than 5 ? Do you have any chronic illness? </h1> 
+        <h2> If at least one is "Yes", please check yes. Other case choose No. </h2>
+        <ion-button (click)="cuartaYes()" color= "lightgreen" size="default" expand="block" > Yes </ion-button>
+        <ion-button (click)="cuartaNo()"color= "danger" size="default" expand="block"> No </ion-button>
+      </ion-card-content> 
+    </ion-card>    
+  </div> 
+
+  <div style= "display: {{tr1}} ">
+    <ion-card>
+      <img src= "https://media1.giphy.com/media/ZY2VAM0Y9Or4Z38zD8/giphy.gif?cid=ecf05e47l8skvtdmphw3b9izddb9ab4c0wg7vhdf3epb55b0&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle> Stay Safe! </ion-card-subtitle>
+          <ion-card-title>
+            Test Result 
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h2> The must accurate recomendation for you is to keep Quarantined!, be always aware of your body! </h2>
+      </ion-card-content> 
+    </ion-card>    
+  </div>
+
+  <div style= "display: {{tr2}}">
+    <ion-card>
+      <img src= "https://media0.giphy.com/media/xT1Ra12a03lcpJf5C0/giphy.gif?cid=ecf05e47daa2maogor5b0wl0ckdfan9wc5ta71qmxhp52ej0&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle> You Must Notify! </ion-card-subtitle>
+          <ion-card-title>
+            Test Advise
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h2> You must notify your hospital or your medical national association that you are most likely to have COVID-19. Look forward to get yourself a PCR test, in order to confirm your illness. Notify anybody that lives with you or that has helld contact with you in the last 14 days  </h2>
+      </ion-card-content> 
+    </ion-card>    
+  </div>
+
+  <div style= "display: {{tr3}}">
+    <ion-card>
+      <img src= "https://media2.giphy.com/media/3o7WIL4IagN9qbszO8/giphy.gif?cid=ecf05e477ybaxx4ouqow2i7403jrhzn1kx10ne6r3fcbpzg8&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle> You Must go to a Hospital! </ion-card-subtitle>
+          <ion-card-title>
+            Test Result 
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h2> By the given information data it seems that ypu are a high risk COVID-19 patient. You need to go to the Hospital ASAP!  </h2>
+      </ion-card-content> 
+    </ion-card>    
+  </div>
+
+  <div style= "display: {{tr4}}">
+    <ion-card>
+      <img src= "https://media3.giphy.com/media/J398B8HoBvU7Ut6VIU/giphy.gif?cid=ecf05e47gp417ns2oiqg72fttaba22d8ji4ectu7donlc12d&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle> You are Really on Quarantine ! </ion-card-subtitle>
+          <ion-card-title>
+            Test Result 
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h2> As You have a very probable COVID case, it is important that you keep yourself on a very strict quarantine, follow our tips that you will find on this app. Please be responsible, stay safe! Notify your family members this way they will always check on you to prevent your case go more drastic </h2>
+      </ion-card-content> 
+    </ion-card>    
+  </div>
+
+  <div style= "display: {{tr5}}">
+    <ion-card>
+      <img src= "https://media0.giphy.com/media/lp7940rbtUmfTUPIJa/giphy.gif?cid=ecf05e47nin49f72v5e916hvy7qn36awfgqx447080403vm5&rid=giphy.gif"> 
+      <ion-card-header>
+        <ion-card-subtitle> You are not safe! </ion-card-subtitle>
+          <ion-card-title>
+            Test Result 
+          </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <h2> You should get some medical help, notify your hospital that you are between the sensible population, you will need medical vigilance  </h2>
+      </ion-card-content> 
+    </ion-card>    
+  </div>
+  <ion-button expand="block" [routerLink]="['../tabs/tab2']" >Go back to Menu</ion-button>
 
 </ion-content>

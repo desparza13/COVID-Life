@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModuleFactoryLoader } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { ServCOVIDLifeService } from '../serv-covid-life.service';
@@ -11,13 +11,15 @@ import { ServCOVIDLifeService } from '../serv-covid-life.service';
 export class Tab2Page {
   Summary = [];
   Countries = [];
+  random: any;
+  randomCountry: any;
   constructor(public service:ServCOVIDLifeService,
               public navCtrl:NavController) {
 
   }
 
   IonViewWillEnter(){
-    
+    this.random = Math.floor(Math.random() * (150));
   }
 
   ngOnInit(){
@@ -27,9 +29,15 @@ export class Tab2Page {
     });
 
       this.service.getCountries().subscribe(countryList => {
-        this.Countries.push(countryList);
-        console.log("Countries:", countryList);
-      })
+        this.Countries = (countryList['Countries']);
+      });
+  }
+
+  getRandomCountry(){
+    this.random = Math.floor(Math.random() * (150));
+    console.log(this.Countries);
+    this.randomCountry = this.Countries[this.random];
+    console.log(this.randomCountry);
   }
 
   goToSelectCountries(){

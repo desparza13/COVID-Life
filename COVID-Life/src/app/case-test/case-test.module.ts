@@ -17,4 +17,7 @@ import { CaseTestPage } from './case-test.page';
   ],
   declarations: [CaseTestPage]
 })
-export class CaseTestPageModule {}
+export class CaseTestPageModule {
+
+
+}

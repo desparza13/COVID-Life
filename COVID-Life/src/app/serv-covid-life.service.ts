@@ -7,6 +7,8 @@ import { Storage } from '@ionic/storage';
 })
 export class ServCOVIDLifeService {
 
+  slectedCountries = [];
+
   constructor( private http:HttpClient, 
                private storage: Storage) {
 

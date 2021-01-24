@@ -16,4 +16,19 @@ export class Tab3Page {
     this.NavCtrl.navigateForward('case-test')
   }
 
+  household= "none"
+  you="none"
+  firstest="inline-block"
+
+  displayYou(){
+    this.you= "inline-block"
+    this.firstest ="none"
+  }
+  displayHouse(){
+    this.household ="inline-block"
+    this.firstest = "none"
+  }
+
+
+
 }

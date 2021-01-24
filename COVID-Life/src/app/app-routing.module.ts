@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./you-tube-videos/you-tube-videos.module').then( m => m.YouTubeVideosPageModule)
   },
   {
-    path: 'country-list',
-    loadChildren: () => import('./country-list/country-list.module').then( m => m.CountryListPageModule)
-  },
-  {
     path: 'quarantine-ideas',
     loadChildren: () => import('./quarantine-ideas/quarantine-ideas.module').then( m => m.QuarantineIdeasPageModule)
   },

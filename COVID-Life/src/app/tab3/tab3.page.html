@@ -12,40 +12,29 @@
       <ion-title size="large"> Prevent the virus spread  </ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-card>
-    <img src="https://img.freepik.com/vector-gratis/familia-protegida-virus_52683-38731.jpg?size=338&ext=jpg">
-    <ion-card-header>
-      <ion-card-subtitle>What To do when there is someone sick on your househodld?</ion-card-subtitle>
-      <ion-card-title> First Aid and Support providing </ion-card-title>
-    </ion-card-header>  
-    <ion-card-content>
-      <h2> Help cover basic needs : </h2>
-      <ul>
-        <li> Help the person who is sick follow their doctor’s instructions for care and medicine.</li>
-        <li> See if over-the-counter medicines for fever help the person feel better.</li> 
-        <li> Make sure the person who is sick drinks a lot of fluids and rests. </li>
-        <li> Help them with grocery shopping, filling prescriptions, and getting other items they may need. Consider having the items delivered through a delivery service, if possible.</li>
-        <li> Take care of their pet(s), and limit contact between the person who is sick and their pet(s) when possible. </li>
-        <li> Have their doctor’s phone number on hand. </li>
-        <li> Call their doctor if the person keeps getting sicker. For medical emergencies, call 911 and tell the dispatcher that the person has or might have COVID-19. </li>
-      </ul>
-    </ion-card-content>
-  </ion-card>
-  <ion-card color="lightgreen">
-    <h2> When to seek medical attention </h2>
-    Look for <b>emergency warning signs* for COVID-19.</b> If someone is showing any of these signs, <b>seek emergency medical care immediately: </b>
-    <ul>
-      <li> Trouble breathing </li>
-      <li> Peristent pain or pressure on the chest </li>
-      <li> New confusion </li>
-      <li> Inability to wake or stay awake </li>
-      <li> Bluish lips or face </li>
-    </ul>
-    Call 911 or call ahead to your local emergency facility: <b>Notify the operator that you are seeking care for someone who has or may have COVID-19.</b>
-  </ion-card>
-  <div style= "display: inline-block;">
+  
+  <div style= "display: {{household}}">
+    <ion-card>
+      <img src="https://media3.giphy.com/media/WXUVIfUe2FiwE8eD31/giphy.gif?cid=ecf05e474gr59dacb81ca53j40myoyhliu2kkifgrv3fx8lf&rid=giphy.gif">
+      <ion-card-header>
+        <ion-card-subtitle>What To do when there is someone sick on your househodld?</ion-card-subtitle>
+        <ion-card-title> First Aid and Support providing </ion-card-title>
+      </ion-card-header>  
+      <ion-card-content>
+        <h2> Help cover basic needs : </h2>
+        <ul>
+          <li> Help the person who is sick follow their doctor’s instructions for care and medicine.</li>
+          <li> See if over-the-counter medicines for fever help the person feel better.</li> 
+          <li> Make sure the person who is sick drinks a lot of fluids and rests. </li>
+          <li> Help them with grocery shopping, filling prescriptions, and getting other items they may need. Consider having the items delivered through a delivery service, if possible.</li>
+          <li> Take care of their pet(s), and limit contact between the person who is sick and their pet(s) when possible. </li>
+          <li> Have their doctor’s phone number on hand. </li>
+          <li> Call their doctor if the person keeps getting sicker. For medical emergencies, call 911 and tell the dispatcher that the person has or might have COVID-19. </li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
     <ion-card >
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAIETC-UJhPrRTj88-EnoH22lknmD6dpeEw&usqp=CAU">
+      <img src="https://media2.giphy.com/media/QWMQqLz0QImdDOZctj/giphy.gif?cid=ecf05e47dcrzkouyf4hrgp2x75j54mede8zsivthsetlwmqe&rid=giphy.gif">
       <ion-card-header>
         <ion-card-subtitle>What To do when there is someone sick on your househodld?</ion-card-subtitle>
         <ion-card-title> Protect Yourself from your Sick Household Member </ion-card-title>
@@ -153,9 +142,9 @@
     </ion-card>
   </div>  
   
-  <div style= "display: inline-block;">
+  <div style= "display: {{you}}">
     <ion-card>
-      <img src="https://images.vexels.com/media/users/3/193270/isolated/preview/1665b158b55ec87c9c7c6cebc3d702d0-covid-19-dolor-de-cabeza-de-car-aacute-cter-s-iacute-ntoma-by-vexels.png">
+      <img src="https://media1.giphy.com/media/Qu1fT51CG14ksIkASL/giphy.gif?cid=ecf05e475g1y59tuufkzwj5y046h5qq9h2z12wkmokpxoz6u&rid=giphy.gif">
       <ion-card-header>
         <ion-card-subtitle>What To do if You Are Sick </ion-card-subtitle>
         <ion-card-title> Steps to help prevent the spread of COVID-19 if you are sick </ion-card-title>
@@ -241,7 +230,7 @@
   </div> 
 
 
-  <div style= "display: inline-block;">
+  <div style= "display: {{firstest}};">
     
     <ion-card>
       <ion-card-header>
@@ -249,8 +238,8 @@
         <ion-card-title> What is your current situation? </ion-card-title>
       </ion-card-header>  
     <ion-card-content>
-      <ion-button color= "primary" size="default" expand="block" > I am sick </ion-button>
-      <ion-button color= "warning" size="default" expand="block"> Somebody on my household is sick</ion-button>
+      <ion-button (click)="displayYou()"color= "primary" size="default" expand="block" > I am sick </ion-button>
+      <ion-button (click)="displayHouse()" color= "warning" size="default" expand="block"> Somebody on my household is sick</ion-button>
     </ion-card-content> 
     </ion-card>  
 
@@ -265,7 +254,7 @@
         <ion-card-title> Do you want to know your best option according tto your scenario? </ion-card-title>
       </ion-card-header>  
     <ion-card-content>
-      <ion-button color= "lightgreen" size="default" expand="block" > Begin the test  </ion-button>
+      <ion-button [routerLink]="['/case-test']"color= "lightgreen" size="default" expand="block" > Begin the test  </ion-button>
     </ion-card-content> 
     </ion-card>  
 

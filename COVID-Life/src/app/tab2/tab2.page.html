@@ -12,12 +12,12 @@
       <ion-title class="title" size="large">COVID in numbers</ion-title>
     </ion-toolbar>
   </ion-header>
-
+<div>
   <ion-card>
     <ion-card-title class="CardTitle">
       Global statistics
     </ion-card-title>
-    <img class="CardImage" src="https://www.anahuac.mx/sites/default/files/gbb-uploads/CoronavirusCell_Mesadetrabajo1-wcs5o5.png">
+    <img class="CardImage" src="https://images-ext-1.discordapp.net/external/OpiFY9mDUZvMnIRhQXgdNwUrIyd1Us2ZQeorw-Y-x-Q/https/i.pinimg.com/originals/f8/5f/55/f85f55221962f0c1100496ffc0898d40.gif?width=465&height=465">
     <ion-card-header  class="CardBackground">
       <ion-card-content>
         <ion-grid class="BackgroundAnimation">
@@ -68,9 +68,65 @@
       </ion-card-content>
     </ion-card-header>
   </ion-card>
-  <ion-fab class="fab-button-style" vertical="bottom" horizontal="end" color="danger" edge slot="fixed">
-    <ion-fab-button (click)="goToSelectCountries()">
-      <ion-icon name="add-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+</div>
+  
+<ion-button class="button-style" (click)="getRandomCountry()">Get a random country's card</ion-button>
+
+<div>
+  <ion-card>
+    <ion-card-title class="CardTitle">
+      Situation in: {{randomCountry.Country}}
+    </ion-card-title>
+    <img class="CardImage" src="https://images-ext-1.discordapp.net/external/OpiFY9mDUZvMnIRhQXgdNwUrIyd1Us2ZQeorw-Y-x-Q/https/i.pinimg.com/originals/f8/5f/55/f85f55221962f0c1100496ffc0898d40.gif?width=465&height=465">
+    <ion-card-header  class="CardBackground">
+      <ion-card-content>
+        <ion-grid class="BackgroundAnimation">
+          <ion-row>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="person-add-outline"></ion-icon>
+                New cases: {{randomCountry.NewConfirmed}}
+              </p> 
+            </ion-col>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="medical-outline"></ion-icon>
+                Total cases: {{randomCountry.TotalConfirmed}}
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="sad-outline"></ion-icon>
+                New deaths: {{randomCountry.NewDeaths}}
+              </p> 
+            </ion-col>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="invert-mode-outline"></ion-icon>
+                Total deaths: {{randomCountry.TotalDeaths}}
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="heart-half-outline"></ion-icon>
+                New recoveries: {{randomCountry.NewRecovered}}
+                
+              </p> 
+            </ion-col>
+            <ion-col>
+              <p class="CardText">
+                <ion-icon name="heart-circle-outline"></ion-icon>
+                Total recoveries: {{randomCountry.TotalRecovered}}
+              </p> 
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+</div>
 </ion-content>
